@@ -1,0 +1,7 @@
+
+Como podemos incluir CSS em documentos HTML?</h4>
+                
+CSS Inline: O CSS inline é aplicado diretamente em um elemento HTML usando o atributo <em>style</em>. É uma forma simples e específica, mas de difícl manutençao e tende a se repetir deixando o código menos eficiente.</p>
+CSS Internal: O CSS internal é definido dentro de uma <em>style</em> tag na seção <em>head</em> do documento HTML. É eficiente para documentos pequenos por centralizar os estilos, mas é inadequado para váias páginas ou um grande documento.</p>
+CSS External: O CSS external é definido em um arquivo separado com a extensão .css, que é vinculado ao HTML usando a tag <em>link</em>.</p>
+    
