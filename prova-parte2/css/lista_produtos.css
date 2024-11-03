@@ -2,10 +2,50 @@
 
 .container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: rgb(240, 240, 240);
-    height: 120svh;    
-    align-content: space-around;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f0f0f0;
+    height:150svh;
+    border-radius: 1% 1% 1% 1%;
+}
+.banner{
+    display: flex;
+    justify-content: space-evenly;
+    height: 20svh;
+    background-color: #ff9100;
+    align-items: center;
+}
+#logo{
+    border-radius: 35px;
+    background-color: aliceblue;
+    width:450px;
+    position: relative;
+    left: 250px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid black;
+    font-size:150%;
+}
+#logo_title{
+    background-color: aliceblue;
+}
+#carrinho{
+
+    /*position: relative;
+    left: 1750px;
+    bottom: 100px;
+    height: 50px;
+    width: 50px;
+    border-style: none;*/
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+#a_liquid{
+    background-color: #f0f0f0;
+    text-decoration: none;
 }
 .box{
     display: inline-block;
@@ -17,21 +57,13 @@
     border-radius: 5% 5% 5% 5%;
     box-shadow: 7px 7px #c0c0c0;
 }
-.banner{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    height: 150px;
-    background-color: #ff9100;
-}
 #box1{
     background-image: url(/prova-parte2/imagens/camiseta_liquid.jpg);
     background-position: center;
-    
 }
 #box2{
     background-image: url(/prova-parte2/imagens/camiseta_fnatic.jpg);
     background-position: center;
-    
 }
 #box3{
     background-image: url(/prova-parte2/imagens/camiseta_w7m.jpg);
@@ -73,3 +105,46 @@
     background-position: center;
     background-size: 104%;
 }
+#item_nome{
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    left: 200px;
+    width: 400px;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#item_info{
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    bottom: 10px;
+    left: 200px;
+    width: 350px;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#item_preco{
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    bottom: 10px;
+    left: 200px;
+    width: 350px;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#promo{
+    background-color: red;
+    color: white;
+    text-align-last: center;
+    position: relative;
+    left: 200px;
+    width: 200px;
+    bottom: 20px;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#valor_original{
+    background-color: rgb(240, 240, 240);
+    text-decoration: line-through;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#rodape{
+    height: 20svh;
+}
+       
+
