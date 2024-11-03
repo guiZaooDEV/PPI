@@ -1,0 +1,75 @@
+*{background-color: #ff9100 }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(240, 240, 240);
+    height: 120svh;    
+    align-content: space-around;
+}
+.box{
+    display: inline-block;
+    background-color: rgb(151, 151, 151);
+    border: 1px solid black;
+    height: 200px;
+    width: 180px;
+    margin: 20px;
+    border-radius: 5% 5% 5% 5%;
+    box-shadow: 7px 7px #c0c0c0;
+}
+.banner{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 150px;
+    background-color: #ff9100;
+}
+#box1{
+    background-image: url(/prova-parte2/imagens/camiseta_liquid.jpg);
+    background-position: center;
+    
+}
+#box2{
+    background-image: url(/prova-parte2/imagens/camiseta_fnatic.jpg);
+    background-position: center;
+    
+}
+#box3{
+    background-image: url(/prova-parte2/imagens/camiseta_w7m.jpg);
+    background-position: center;
+    background-size: 104%;
+}
+#box4{
+    background-image: url(/prova-parte2/imagens/camiseta_g2.jpg);
+    background-position: center;
+    background-size: 104%;  
+}
+#box5{
+    background-image: url(/prova-parte2/imagens/camiseta_pain.jpg);
+    background-position: center;
+    background-size: 130%;  
+}
+#box6{
+    background-image: url(/prova-parte2/imagens/camiseta_nip.jpg);
+    background-position: center;
+    background-size: 104%; 
+}
+#box7{
+    background-image: url(/prova-parte2/imagens/camiseta_rogue.jpg);
+    background-position: center;
+    background-size: 104%; 
+}
+#box8{
+    background-image: url(/prova-parte2/imagens/camiseta_secret.jpg);
+    background-position: center;
+    background-size: 120%;  
+}
+#box9{
+    background-image: url(/prova-parte2/imagens/camiseta_vitality.jpg);
+    background-position: center;
+    background-size: 120%;  
+}
+#box10{
+    background-image: url(/prova-parte2/imagens/camiseta_furia.jpg);
+    background-position: center;
+    background-size: 104%;
+}
