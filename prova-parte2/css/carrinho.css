@@ -1,0 +1,114 @@
+*{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+html,body{
+    background-color: #ff9100;
+}
+.banner{
+    display: flex;
+    justify-content: space-evenly;
+    height: 20svh;
+    background-color: #ff9100;
+    align-items: center;
+}
+#logo{
+    display: flex;
+    border-radius: 20px;
+    background-color: aliceblue;
+    height: 10svh;
+    width:450px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size:150%;
+}
+.fundo{
+    background-color: #ffb350;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+.container{
+    display: flex;
+    flex-direction: column ;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #e7e7e7;
+    height:500px;
+    width: 1000px;
+    border-radius: 1% 1% 1% 1%;  
+}
+@media(max-width:1050px) {
+    .container{display: flex;
+    flex-direction: column ;
+    flex-wrap: wrap;
+    
+    background-color: #f0f0f0;
+    height: 600px;
+    border-radius: 1% 1% 1% 1%;
+    }
+    body{
+        min-width: 600px;
+    }
+}
+#box1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e7e7;
+    border-radius: 5px 5px 0px 0px;
+    width: 1000px;
+    height: 5svh;
+}
+#box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    width: 950px;
+    height: 40svh;
+}
+#item1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#item2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#item3{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+button{
+    background-color: #ffb350;
+}
+#qtd{
+    width: 30px;
+}
+#box3{
+    display: flex;
+    height: 8svh;
+    flex-direction: column;
+    justify-content: center;
+}
+#fim{
+    width: 200px;
+    height: 50px;
+}
+#img{
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px gray;
+}
+#barra_pesquisa{
+    width: 400px;
+}
+
