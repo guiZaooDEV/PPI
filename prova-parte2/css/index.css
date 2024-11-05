@@ -1,0 +1,110 @@
+*{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+
+body{background-color: #ff9100 }
+
+.container{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #f0f0f0;
+    height:700px;
+    border-radius: 1% 1% 1% 1%;  
+}
+@media(max-width:1600px) {
+    .container{display: flex;
+    flex-direction: column ;
+    flex-wrap: wrap;
+    
+    background-color: #f0f0f0;
+    height:1400px;
+    border-radius: 1% 1% 1% 1%;
+    }
+    body{
+        min-width: 600px;
+    }
+    #barra_pesquisa{
+        width: 50px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media(max-width:1075px) {
+    .container{display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    height:1400px;
+    border-radius: 1% 1% 1% 1%;
+    }
+    body{
+        min-width: 600px;
+    }
+}
+.banner{
+    display: flex;
+    justify-content: space-evenly;
+    height: 20svh;
+    background-color: #ff9100;
+    align-items: center;
+}
+#logo{
+    display: flex;
+    border-radius: 20px;
+    background-color: aliceblue;
+    height: 10svh;
+    width:450px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid black;
+    font-size:150%;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+#a_liquid{
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+#barra_pesquisa{
+    width: 100px;
+    position: relative;
+    bottom: 10px;
+}
+
+.rodape{
+    height: 20svh;
+}
+.box{
+    margin-top: 20px;   
+}
+
+#item_preco{
+    background-color: rgb(240, 240, 240);
+    width: 300px;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#promo{
+    background-color: red;
+    color: white;
+    text-align-last: center;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#valor_original{
+    background-color: rgb(240, 240, 240);
+    text-decoration: line-through;
+    text-shadow: 1px 1px #c0c0c0;
+}
+a{
+    text-decoration: none;
+}
+.rodape{
+    height: 20svh;
+}

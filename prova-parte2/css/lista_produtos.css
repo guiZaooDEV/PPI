@@ -23,6 +23,11 @@ body{background-color: #ff9100 }
     body{
         min-width: 600px;
     }
+    #barra_pesquisa{
+        width: 50px;
+        position: relative;
+        bottom: 10px;
+    }
 }
 @media(max-width:1075px) {
     .container{display: flex;
@@ -36,10 +41,11 @@ body{background-color: #ff9100 }
     body{
         min-width: 600px;
     }
+
 }
 .banner{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 20svh;
     background-color: #ff9100;
     align-items: center;
@@ -160,8 +166,17 @@ a:visited{
     text-decoration: line-through;
     text-shadow: 1px 1px #c0c0c0;
 }
+#barra_pesquisa{
+    width: 100px;
+    position: relative;
+    bottom: 10px;
+}
+
 .rodape{
     height: 20svh;
+}
+a{
+    text-decoration: none;
 }
        
 

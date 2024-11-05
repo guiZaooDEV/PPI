@@ -72,6 +72,30 @@ a:link{
 a:visited{
     color: black;
 }
+#barra_pesquisa{
+    width: 100px;
+    position: relative;
+    bottom: 10px;
+}
+#item_preco{
+    background-color: rgb(240, 240, 240);
+    width: 300px;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#promo{
+    background-color: red;
+    color: white;
+    text-align-last: center;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#valor_original{
+    background-color: rgb(240, 240, 240);
+    text-decoration: line-through;
+    text-shadow: 1px 1px #c0c0c0;
+}
 .footer{
     height: 20svh;
+}
+a{
+    text-decoration: none;
 }
