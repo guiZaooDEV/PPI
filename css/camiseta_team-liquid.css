@@ -1,0 +1,101 @@
+*{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+body{background-color: #ff9100}
+.banner{
+    display: flex;
+    justify-content: space-evenly;
+    height: 20svh;
+    background-color: #ff9100;
+    align-items: center;
+}
+#logo{
+    display: flex;
+    border-radius: 20px;
+    background-color: aliceblue;
+    height: 10svh;
+    width:450px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size:150%;
+}
+.container{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    height:800px;
+    border-radius: 1% 1% 1% 1%;  
+}
+@media(max-width:1050px) {
+    .container{display: flex;
+    flex-direction: column ;
+    flex-wrap: wrap;
+    
+    background-color: #f0f0f0;
+    height: 1100px;
+    border-radius: 1% 1% 1% 1%;
+    }
+    body{
+        min-width: 600px;
+    }
+}
+
+#info{
+    display: flex;
+    flex-direction: column
+}
+#img{
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+#qtd{
+    position: relative;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    bottom: 5px;
+}
+#comprar_agora{
+    border: 1px solid black;
+    text-align: center;
+    background-color: #ff9100;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+#barra_pesquisa{
+    width: 100px;
+    position: relative;
+    bottom: 10px;
+}
+#item_preco{
+    background-color: rgb(240, 240, 240);
+    width: 300px;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#promo{
+    background-color: red;
+    color: white;
+    text-align-last: center;
+    text-shadow: 1px 1px #c0c0c0;
+}
+#valor_original{
+    background-color: rgb(240, 240, 240);
+    text-decoration: line-through;
+    text-shadow: 1px 1px #c0c0c0;
+}
+.footer{
+    height: 20svh;
+}
+a{
+    text-decoration: none;
+}
