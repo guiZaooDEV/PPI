@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+</head>
+<body>
+    <div id="filmes"></div>
+    <script>
+        const apikey="b88efbd2";
+        const url=("http://www.omdbapi.com/?t=matrix&apikey="+apikey);
+
+        fetch(url)
+        .then(response=>response.json())
+        .then(data=>{
+
+            let filme = document.getElementById("filmes");
+            data.Search.forEach(movie=>{
+                filme.innerHTML+=`
+                    <div style="border:1px solid black;text-align: center;">
+                        <p> Título: ${movie.Title}</p>
+                    </div>
+                `;
+            })
+        })
+    </script>
+</body>
+</html>

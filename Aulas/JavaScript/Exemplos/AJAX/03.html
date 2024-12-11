@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 03</title>
+</head>
+<body>
+    <div id="dados"></div>
+    <script>
+        div=document.getElementById("dados")
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(response=>response.json())
+        .then(data=>{
+            console.log(JSON.stringify(data))
+            piada=`
+            <p id="data_criacao">${data.created_at}</p>
+            <img id-"icon" src="${data.icon_url}">
+            <p id="piada">${data.value}</p>
+            `
+            div.innerHTML=piada;
+        })
+        
+        
+    </script>
+</body>
+</html>

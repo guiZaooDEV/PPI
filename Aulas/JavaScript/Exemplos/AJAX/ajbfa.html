@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style></style>
+</head>
+
+<!-- http://www.omdbapi.com/?apikey=b76f27a8
+
+
+-->
+
+<body>
+
+    <div id="filmes"></div>
+
+    <script>
+        var apikey = "b76f27a8";
+        url = "http://www.omdbapi.com/?s=Matrix&y=1999&apikey=" + apikey;
+
+        fetch(url)
+        .then(r=>r.json())
+        .then(dados =>{
+            console.log(dados);
+            dados.Search.forEach(element => {
+                document.querySelector("#filmes").innerHTML+= posterFilme(element);
+            });
+        })
+        
+        function posterFilme(json){
+            poster= `
+                <div class="poster">
+                    <h2>${json.Title}</h2>
+                    <img src="${json.Poster}">
+                    <p> Duração: ${json.Runtime} </p>
+                </div>
+
+            `
+
+            return poster;
+        }
+
+    </script>
+
+</body>
+</html>
