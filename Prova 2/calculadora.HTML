@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #6abce2;
+            height: 100vh;
+        }
+        .box{
+            border: 1px solid rgb(126, 126, 126);
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 6px 6px #4b4b4b;
+            background-color: #f0f0f0;
+            font-size: 24px;
+        }
+        .operacoes{ 
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: #f0f0f0;
+            color: #f0f0f0;
+            height: 60px;
+            text-align: right;
+            font-size: 20px;           
+        }
+        .base {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+        .numeros {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        button {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 60px;
+            color: #000;
+            font-size: 24px;
+            cursor: pointer;
+            border: 1px solid #646464;
+            transition: background-color 0.3s;
+        }
+        button:active {
+            opacity: 0.3;
+            background-color: #646464;
+        }
+        .rst {
+            background-color: #62ff07;
+            height: 100%;
+        }
+        .display {
+            background-color: #f0f0f0;
+            color: #000000;
+            height: 40px;
+            padding: 10px 20px;
+            text-align: right;
+            font-size: 18px;
+        }
+        .resultado {
+            background-color: #f0f0f0;
+            color: #000000;
+            height: 60px;
+            padding: 10px 20px;
+            text-align: right;
+            font-size: 36px;
+        }
+        h1{
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div><h1>Calculadora</h1></div>
+    <div class="box">
+        <div></div>
+        <div class="display" id="input"></div>
+        <div class="resultado" id="resultado"></div>
+        <div class="operacoes">
+            <button class="operadores" onclick="adicionarOperador('+')">+</button>
+            <button class="operadores" onclick="adicionarOperador('-')">-</button>
+            <button class="operadores" onclick="adicionarOperador('*')">*</button>
+            <button class="operadores" onclick="adicionarOperador('/')">/</button>
+        </div>
+        <div class="base">
+            <div class="numeros">
+                <button class="num" onclick="adicionarNumero('7')">7</button>
+                <button class="num" onclick="adicionarNumero('8')">8</button>
+                <button class="num" onclick="adicionarNumero('9')">9</button>
+                <button class="num" onclick="adicionarNumero('4')">4</button>
+                <button class="num" onclick="adicionarNumero('5')">5</button>
+                <button class="num" onclick="adicionarNumero('6')">6</button>
+                <button class="num" onclick="adicionarNumero('1')">1</button>
+                <button class="num" onclick="adicionarNumero('2')">2</button>
+                <button class="num" onclick="adicionarNumero('3')">3</button>
+                <button class="num" onclick="adicionarNumero('0')">0</button>
+                <button class="num" onclick="adicionarNumero('.')">.</button>
+                <button class="num" onclick="limpar()">C</button>
+            </div>
+            <button class="rst" onclick="calcular()">=</button>
+        </div>
+    </div>
+    
+    <script>
+        let expressaoDiv = document.getElementById("input");
+        let resultadoDiv = document.getElementById("resultado");
+        let expressao = "";
+        let ultimoOperador = "";
+
+        function adicionarNumero(num) {
+            if (resultadoDiv.innerText === "0" || ultimoOperador === "=") {
+                resultadoDiv.innerText = num;
+            } else {
+                resultadoDiv.innerText += num;
+            }
+            ultimoOperador = "";
+        }
+
+        function adicionarOperador(operador) {
+            if (resultadoDiv.innerText !== "0") {
+                expressao += resultadoDiv.innerText + operador;
+                expressaoDiv.innerText = expressao;
+                resultadoDiv.innerText = "0";
+            }
+            ultimoOperador = operador;
+        }
+
+        function calcular() {
+            if (expressao && resultadoDiv.innerText) {
+                expressao += resultadoDiv.innerText;
+                expressaoDiv.innerText = expressao + "=";
+                resultadoDiv.innerText = eval(expressao);
+                expressao = "";
+                ultimoOperador = "=";
+            }
+        }
+        function limpar() {
+            expressao = ""; 
+            expressaoDiv.innerText = "";  
+            resultadoDiv.innerText = "0"; 
+            ultimoOperador = ""; 
+        }
+
+    </script>
+</body>
+</html>

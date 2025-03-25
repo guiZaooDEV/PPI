@@ -1,0 +1,13 @@
+
+O que são seletores CSS?
+
+Os seletores CSS são padrões que permitem selecionar elementos HTML para aplicar estilos a eles. Existem vários tipos de seletores, incluindo:
+                    
+Seletores de Tipo: Seletor de elementos (e.g., div, h1, p).
+Seletores de Classe: Selecionam elementos com uma determinada classe (e.g., .minha-classe).
+Seletores de ID: Selecionam um elemento específico com um ID (e.g., #meu-id).
+Seletores de Atributo: Selecionam elementos com um atributo específico (e.g., [type="text"]).
+Seletores Combinados: Combinam seletores (e.g., div > p, ul li).
+Seletores Pseudo-classes: Selecionam elementos em um estado específico (e.g., a:hover).
+Seletores Pseudo-elementos: Selecionam partes de um elemento (e.g., p::first-line).
+    

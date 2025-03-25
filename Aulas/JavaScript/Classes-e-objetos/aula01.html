@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Pessoa{
+            constructor(nome,anoNascimento){
+                this.nome=nome
+                this.anoNascimento=anoNascimento
+            } 
+            
+            idade(anoAtual){
+                return new Date().getFullYear() - this.anoNascimento
+            }
+        }
+       
+        class Aluno extends Pessoa{
+            constructor(nome, anoNascimento, matricula){
+                super(nome, anoNascimento)
+                this.matricula=matricula
+            }
+        }
+
+        guilherme = new Pessoa("Guilherme",2001);
+
+        alert("Nova pessoa criada: " + guilherme.nome + "," + guilherme.anoNascimento)
+        
+        alert("Idade em anos: "+guilherme.idade())
+
+        gustavo = new Aluno("Gustavo", 1981, 1234)
+
+        alert("Novo aluno: "+gustavo.nome+","+gustavo.anoNascimento)
+        alert("Idade: "+gustavo.idade())
+        alert("Matricula: "+gustavo.matricula)
+
+    </script>
+</body>
+</html>

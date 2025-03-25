@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #6abce2;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        #cronometro{
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            border: none;
+            box-shadow: 5px 5px #538797;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d1d1d1;
+        }
+
+        button:active {
+            background-color: #666666;
+        }
+
+        .botoes{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+</head>
+<body onload="startTime()">
+    <div id="cronometro">00:00:00</div>
+    <div class="botoes">
+        <button id="iniciar">Iniciar</button>
+        <button id="pausar" disabled>Pausar</button>
+        <button id="resetar" disabled>Restaurar</button>
+    </div>
+
+    <script>
+        let cronometro = document.getElementById("cronometro");
+        let iniciarBtn = document.getElementById("iniciar");
+        let pausarBtn = document.getElementById("pausar");
+        let resetarBtn = document.getElementById("resetar");
+        let tempoInicial;
+        let intervalo;
+
+        function startTime() {
+            let agora = new Date();
+            let h = agora.getHours();
+            let m = agora.getMinutes();
+            let s = agora.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('hora').innerHTML = h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };
+            return i;
+        }
+
+        function atualizarCronometro() {
+            let agora = new Date();
+            let diferenca = Math.floor((agora - tempoInicial) / 1000);
+            let horas = Math.floor(diferenca / 3600);
+            let minutos = Math.floor((diferenca % 3600) / 60);
+            let seg = diferenca % 60;
+
+            cronometro.innerText =
+                `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(seg).padStart(2, '0')}`;
+        }
+
+        iniciarBtn.addEventListener("click", () => {
+            tempoInicial = new Date();
+            intervalo = setInterval(atualizarCronometro, 1000);
+            iniciarBtn.disabled = true;
+            pausarBtn.disabled = false;
+            resetarBtn.disabled = false;
+        });
+
+        pausarBtn.addEventListener("click", () => {
+            clearInterval(intervalo);
+            iniciarBtn.disabled = false;
+            pausarBtn.disabled = true;
+        });
+
+        resetarBtn.addEventListener("click", () => {
+            clearInterval(intervalo);
+            cronometro.innerText = "00:00:00";
+            iniciarBtn.disabled = false;
+            pausarBtn.disabled = true;
+            resetarBtn.disabled = true;
+        });
+    </script>
+</body>
+</html>
