@@ -18,16 +18,30 @@
             die("Connection Failed: ". $conn->connect_error);
         }
 
-        echo "Conected successfully";
+        echo "Conected successfully <br>";
+        
+        $sql = "INSERT INTO mydb.myguests(nome, idade) VALUES ('Edson', '25')";
 
-        $sql = "CREATE DATABASE myDB";
-
-        if ($conn->query($sql) === TRUE){
-            echo "Database created successfully";
+        if ($conn->query($sql) == TRUE){
+            echo "registro inserido com sucesso";
         }
         else{
-            echo "Error creating database : " . $conn->error;
+            echo ("Erro: ". $sql . "<br>" . $conn->error);
         }
-    ?>
+
+        $sql = "SELECT * FROM mydb.myGuests";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0){
+            while($row = $result->fetch_assoc()){
+                echo "id: " .$row["id"]. " - Nome: ". $row["nome"] . " - Idade: ". $row["idade"]. "<br>";
+            }
+            
+        }else{
+            echo "0 Resultados";
+        }
+            
+        $conn->close()
+    ?> 
 </body>
 </html>
